@@ -1,0 +1,172 @@
+#-------------------------------------------------------------------------------------
+Function: benchmark_covariance
+Number of iterations of algorithm: 100                                                
+Mean original time: 1.3799995613098144
+Mean optimized time: 1.4984831309318543
+Improvement: -8.585769%
+
+#-------------------------------------------------------------------------------------
+Function: benchmark_gemm
+Number of iterations of algorithm: 100                                                
+Mean original time: 1.9093590188026428
+Mean optimized time: 2.1156729650497437
+Improvement: -10.805404%
+
+#-------------------------------------------------------------------------------------
+Function: benchmark_gemerv
+Number of iterations of algorithm: 100                                                
+Mean original time: 0.12068809747695923
+Mean optimized time: 0.12536041975021361
+Improvement: -3.871403%
+
+#-------------------------------------------------------------------------------------
+Function: benchmark_gesummv
+Number of iterations of algorithm: 100                                                
+Mean original time: 6.124303460121155
+Mean optimized time: 6.298786501884461
+Improvement: -2.849027%
+
+#-------------------------------------------------------------------------------------
+Function: benchmark_symm
+Number of iterations of algorithm: 100                                                
+Mean original time: 1.6328925323486327
+Mean optimized time: 1.6836289954185486
+Improvement: -3.107153%
+
+#-------------------------------------------------------------------------------------
+Function: benchmark_syr2k
+Number of iterations of algorithm: 100                                                
+Mean original time: 2.0630007362365723
+Mean optimized time: 1.909768123626709
+Improvement: 7.427657%
+
+#-------------------------------------------------------------------------------------
+Function: benchmark_syrk
+Number of iterations of algorithm: 100                                                
+Mean original time: 1.2114665174484254
+Mean optimized time: 1.1807829904556275
+Improvement: 2.532759%
+
+#-------------------------------------------------------------------------------------
+Function: benchmark_trmm
+Number of iterations of algorithm: 100                                                
+Mean original time: 0.7532791399955749
+Mean optimized time: 0.8131588411331176
+Improvement: -7.949205%
+
+#-------------------------------------------------------------------------------------
+Function: benchmark_2mm
+Number of iterations of algorithm: 100                                                
+Mean original time: 2.906638276576996
+Mean optimized time: 3.178354640007019
+Improvement: -9.348131%
+
+#-------------------------------------------------------------------------------------
+Function: benchmark_3mm
+Number of iterations of algorithm: 100                                                
+Mean original time: 4.489813318252564
+Mean optimized time: 4.878045799732209
+Improvement: -8.646963%
+
+#-------------------------------------------------------------------------------------
+Function: benchmark_atax
+Number of iterations of algorithm: 100                                                
+Mean original time: 0.07916943788528442
+Mean optimized time: 0.09055577754974366
+Improvement: -14.382241%
+
+#-------------------------------------------------------------------------------------
+Function: benchmark_bicg
+Number of iterations of algorithm: 100                                                
+Mean original time: 0.08033095836639405
+Mean optimized time: 0.08888249158859253
+Improvement: -10.645377%
+
+#-------------------------------------------------------------------------------------
+Function: benchmark_doitgen
+Number of iterations of algorithm: 100                                                
+Mean original time: 1.2549193429946899
+Mean optimized time: 1.255786168575287
+Improvement: -0.069074%
+
+#-------------------------------------------------------------------------------------
+Function: benchmark_mvt
+Number of iterations of algorithm: 100                                                
+Mean original time: 0.07259254693984986
+Mean optimized time: 0.07775166988372803
+Improvement: -7.106960%
+
+#-------------------------------------------------------------------------------------
+Function: benchmark_cholesky
+Functions won't yield the same results
+
+#-------------------------------------------------------------------------------------
+Function: benchmark_durbin
+Functions won't yield the same results
+
+#-------------------------------------------------------------------------------------
+Function: benchmark_gramschmidt
+Number of iterations of algorithm: 100                                                
+Mean original time: 2.1664408683776855
+Mean optimized time: 2.3706260323524475
+Improvement: -9.424913%
+
+#-------------------------------------------------------------------------------------
+Function: benchmark_lu
+Functions won't yield the same results
+
+#-------------------------------------------------------------------------------------
+Function: benchmark_ludcmp
+Functions won't yield the same results
+
+#-------------------------------------------------------------------------------------
+Function: benchmark_trisolv
+Number of iterations of algorithm: 100                                                
+Mean original time: 0.027372541427612303
+Mean optimized time: 0.03025545358657837
+Improvement: -10.532132%
+
+#-------------------------------------------------------------------------------------
+Function: benchmark_deriche
+Number of iterations of algorithm: 100                                                
+Mean original time: 0.7612995433807374
+Mean optimized time: 0.7953231978416443
+Improvement: -4.469155%
+
+#-------------------------------------------------------------------------------------
+Function: benchmark_nussinov
+Functions won't yield the same results
+
+#-------------------------------------------------------------------------------------
+Function: benchmark_adi
+Functions won't yield the same results
+
+#-------------------------------------------------------------------------------------
+Function: benchmark_fdtd_2d
+Functions won't yield the same results
+
+#-------------------------------------------------------------------------------------
+Function: benchmark_heat_3d
+Functions won't yield the same results
+
+#-------------------------------------------------------------------------------------
+Function: benchmark_jacobi_1D
+Number of iterations of algorithm: 100                                                
+Mean original time: 0.01439884901046753
+Mean optimized time: 0.03624727487564087
+Improvement: -151.737308%
+
+#-------------------------------------------------------------------------------------
+Function: benchmark_jacobi_2D
+Number of iterations of algorithm: 100                                                
+Mean original time: 4.687359073162079
+Mean optimized time: 13.712033035755157
+Improvement: -192.532166%
+
+#-------------------------------------------------------------------------------------
+Function: benchmark_seidel_2D
+Number of iterations of algorithm: 100                                                
+Mean original time: 13.983514297008515
+Mean optimized time: 42.474242341518405
+Improvement: -203.745120%
+
