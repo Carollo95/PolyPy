@@ -376,6 +376,7 @@ def __calculate_range_of_iterations(code_block, parameters, var_id_by_var_name, 
                         polynom = __analyze_polynom(args[0], [], parameters, [-1], var_id_by_var_name)
                         condition = Condition()
                         condition.term = polynom.term
+                        condition.coefficients = polynom.coefficients
                         condition.coefficients['|' + iterator + '|'] = -1
                         end_conditions.append(condition)
                 if len(args) >= 2:
@@ -383,6 +384,7 @@ def __calculate_range_of_iterations(code_block, parameters, var_id_by_var_name, 
                         polynom = __analyze_polynom(args[1], [], parameters, [-1], var_id_by_var_name)
                         condition = Condition()
                         condition.term = polynom.term
+                        condition.coefficients = polynom.coefficients
                         condition.coefficients['|' + iterator + '|'] = 1
                         start_conditions.append(condition)
                 else:
