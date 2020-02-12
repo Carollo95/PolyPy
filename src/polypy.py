@@ -54,7 +54,7 @@ def __code_from_condition(condition, iterator, is_start):
         else:
             code += str(condition.term)
     if divisor != 1:
-        code = '(' + code + ')/' + str(divisor)
+        code = '(' + code + ')//' + str(divisor)
     return code
 
 
@@ -108,13 +108,16 @@ def __get_loop_code(iterator, start_conditions, end_conditions, indentation):
 
     # End
     if len(end_conditions) == 1:
-        loop_end = __code_from_condition(end_conditions[0], iterator, False)
+        condition = __code_from_condition(end_conditions[0], iterator, False)
+        if (condition != ''):
+            condition = '(' + condition + ')+1'
+        loop_end = condition
     else:
         aux = []
         for condition in end_conditions:
             condition = __code_from_condition(condition, iterator, False)
             if condition != '':
-                aux.append(condition)
+                aux.append('(' + condition + ')+1')
             else:
                 aux.append('0')
         if len(aux) > 1:
@@ -284,7 +287,7 @@ def __get_code(tree, code='', indentation=0):
                             condition.term *= -1
                             start_conditions.append(condition)
                         else:
-                            condition.term += 1  # Range is <, while the condition_text is <=
+                            #condition.term += 1  # Range is <, while the condition_text is <=
                             end_conditions.append(condition)
                     else:
                         if_conditions.append(condition)
@@ -902,13 +905,13 @@ def __optimize_loops(function, debug_mode):
     """
     config = ConfigParser()
     config.read('polypy.conf')
-    pocc_path = config['DEFAULT']['PoCC_path']
+    pocc_path = config['DEFAULT']['pocc_path']
 
     generate_scoplib_file(function, 'polypy')
 
     # Optimization of SCoPLib
 
-    optimization_process = subprocess.Popen([pocc_path + ' --read-scop polypy.scop --pluto '],
+    optimization_process = subprocess.Popen([pocc_path + ' --read-scop polypy.scop --pluto-tile'],
                                             shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
     optimization_process.wait()
     optimization_process_output, optimization_process_output_error = optimization_process.communicate()
@@ -916,7 +919,7 @@ def __optimize_loops(function, debug_mode):
         if debug_mode:
             for line in optimization_process_output_error.decode('utf-8').split('\n'):
                 print('DEBUG:', line, '\n')
-        raise CalledProcessError(1, 'pocc --read-scop polypy.scop --pluto from')
+        raise CalledProcessError(1, 'pocc --read-scop polypy.scop --pluto-tile from')
     else:
         if debug_mode:
             print('DEBUG: output_scop_output')
